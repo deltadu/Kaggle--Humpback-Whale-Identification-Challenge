@@ -16,9 +16,11 @@ train_df = pd.read_csv('train.csv')
 
 num_categories = len(train_df['Id'].unique())
 validation = np.zeros((10, 299, 299, 3))
+validation_y = []
 
 i = 0
 for id in train_df['Id']:
+	validation_y.append(id)
 	im = train_df[train_df['Id'] == id].sample(1)
 	name =  np.array(im.get('Image'))[0]
 	im = get_im('train/' + name)
