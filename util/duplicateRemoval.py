@@ -1,3 +1,5 @@
+# Duplicate Detection part is adopted from https://www.kaggle.com/stehai/duplicate-images
+
 import numpy as np
 import pandas as pd
 from PIL import Image
