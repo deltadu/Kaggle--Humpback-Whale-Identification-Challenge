@@ -8,6 +8,10 @@ def normalizeInput(inputImages, precalculatedMeans = None, precalculatedStds = N
         inputImages: an Numpy array that contains all the images. Assume the input is 3D or 4D array
                          3D: (imageIdx, x, y);
                          4D: (imageIdx, x, y, colorChannel)
+        precalculatedMeans: an 1-D Numpy array that contains precalcualted mean values.
+                            The mean values will be calculated if it is not specified
+        precalculatedStds: an 1-D Numpy array that contains precalcualted standard deviation values.
+                            The standard deviation values will be calculated if it is not specified
     Returns:
         Numpy array: in-place modified image array
     """
